@@ -1,0 +1,101 @@
+using System;
+using System.Security.Cryptography;
+using System.Security.Cryptography.X509Certificates;
+
+namespace SmartHomeController
+{
+
+    public class user { 
+
+        //private fields
+
+    {
+        private int userID;
+        private string userName;
+        private string contactInfo;
+        private bool isLoggedIn;
+    }
+
+        //private properties
+
+    public int UserId;
+        {
+            get { return userID; }
+            set { userID = value; }
+        }
+
+    public string userName
+        {
+            get { return userID; }
+            set { userID = value; }
+        }
+
+    public string ContactInfo
+        {
+            get { return contactInfo; }
+            set { contactInfo = value; }
+        }  
+
+        public bool IsLoggedIn
+        {
+            get { return isLoggedIn; }
+            set { isLoggedIn = value; }
+        }
+
+        //paramaterised constructor
+
+        public User (int userID, string userName, string contactInfo)
+        {
+            this.userID = userID;
+            this.userName = userName
+            this.password = PasswordDeriveBytes;
+            this.isLoggedIn = false;
+        }
+
+
+        // login method 
+
+        public Login(String userName, String password)
+        {
+
+            if (userName == userName && password == Password)
+            {
+                isLoggedIn = true;
+                Console.WriteLine("Login Successful");
+            } else
+            {
+                isLoggedIn = false;
+                Console.WriteLine($"Login failed. Username {userName} or password is incorrect."
+            }
+
+            return isLoggedIn;
+        }
+
+        //logout method
+
+        public void Logout()
+        {
+            if (isLoggedIn) 
+            { Console.WriteLine("User logged out successfully");
+            } else 
+            { Console.WriteLine("User not logged in");
+
+
+        //control device validation
+
+        public void ControlDevice (int deviceID, string deviceName, string deviceAction)
+        {
+            if (isLoggedIn)
+            {
+                Console.WriteLine($"Performing action {deviceAction} on {deviceName}");
+                //logic
+
+            } else
+            {
+                Console.WriteLine("Please log in to control the device");
+            }
+        }
+
+
+
+}
